@@ -96,6 +96,7 @@ extension PageContentView:UICollectionViewDelegate {
         isForbidScrollDelefate = false
         
         startOffsetX = scrollView.contentOffset.x
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -109,6 +110,8 @@ extension PageContentView:UICollectionViewDelegate {
         
         // 判断是作画还是右划
         let currentOffsetX = scrollView.contentOffset.x
+        print("currentOffsetX = \(currentOffsetX)")
+        print("startOffsetX= \(scrollView.bounds.width)")
         let scrollviewW = scrollView.bounds.width
         if currentOffsetX > startOffsetX { //左滑
             progress = currentOffsetX / scrollviewW - floor(currentOffsetX / scrollviewW)

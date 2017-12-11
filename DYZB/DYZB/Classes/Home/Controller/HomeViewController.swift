@@ -21,11 +21,12 @@ class HomeViewController: UIViewController {
     
     lazy var pageContentView: PageContentView = { [weak self] in
         
-        let contentH = kScreenH - kNavigationBarH - kTitleViewH
+        let contentH = kScreenH - kNavigationBarH - kTitleViewH - kTabBarH
         let contentFrame = CGRect(x: 0, y: kStatusbarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
         
         var childVCs = [UIViewController]()
-        for _ in 0..<4 {
+        childVCs.append(RecommendViewController())
+        for _ in 0..<3 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVCs.append(vc)
@@ -41,11 +42,20 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         //设置UI界面
         setupUI()
-        
+        // 发送网络请求
+        loadData()
     }
-
-
 }
+
+// MARK: - 请求数据
+extension HomeViewController {
+    private func loadData() {
+        NetworkTools.requestData(type: .get, URLString: "http://httpbin.org/get", parameters: ["name" : "why"]) { (result) in
+            print(result)
+        }
+    }
+}
+
 // MARK: - 设置UI界面
 extension HomeViewController {
     func setupUI()  {
