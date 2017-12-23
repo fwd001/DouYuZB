@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="246" height="275"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTq-Y3-zLM">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTq-Y3-zLM">
                         <rect key="frame" x="0.0" y="251" width="46" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="5mv-Wb-cim"/>
@@ -46,39 +46,46 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6666在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWK-K2-0m0">
-                        <rect key="frame" x="181" y="5" width="60" height="20"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="910-mv-N3T">
+                        <rect key="frame" x="178" y="8" width="60" height="20"/>
                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="Txv-6s-bfs"/>
-                            <constraint firstAttribute="height" constant="20" id="Xe6-iM-Vjy"/>
+                            <constraint firstAttribute="width" constant="60" id="WDa-7B-7ir"/>
+                            <constraint firstAttribute="height" constant="20" id="eiN-LY-Cy6"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
+                        <state key="normal" title="666在线">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </button>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="910-mv-N3T" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="0UJ-cs-z1L"/>
                 <constraint firstItem="A3x-hj-iYg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="86e-uC-q1L"/>
                 <constraint firstAttribute="trailing" secondItem="jPX-1S-WwJ" secondAttribute="trailing" constant="5" id="8Yd-Id-Fu5"/>
+                <constraint firstAttribute="trailing" secondItem="910-mv-N3T" secondAttribute="trailing" constant="8" id="9dX-Ql-8Vm"/>
                 <constraint firstAttribute="bottom" secondItem="dTq-Y3-zLM" secondAttribute="bottom" constant="10" id="JwV-kl-Jdn"/>
                 <constraint firstAttribute="trailing" secondItem="A3x-hj-iYg" secondAttribute="trailing" id="Yov-P9-SW1"/>
                 <constraint firstItem="dTq-Y3-zLM" firstAttribute="top" secondItem="jPX-1S-WwJ" secondAttribute="bottom" constant="5" id="dIO-Dk-8Ut"/>
                 <constraint firstItem="jPX-1S-WwJ" firstAttribute="top" secondItem="A3x-hj-iYg" secondAttribute="bottom" constant="5" id="dkE-F5-IfA"/>
                 <constraint firstItem="A3x-hj-iYg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iG2-5Y-bSb"/>
-                <constraint firstAttribute="trailing" secondItem="JWK-K2-0m0" secondAttribute="trailing" constant="5" id="ois-Xg-ZUG"/>
                 <constraint firstItem="jPX-1S-WwJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qfx-xW-fdG"/>
-                <constraint firstItem="JWK-K2-0m0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="quf-nu-xLQ"/>
                 <constraint firstItem="dTq-Y3-zLM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sFJ-q5-06D"/>
             </constraints>
             <size key="customSize" width="246" height="275"/>
+            <connections>
+                <outlet property="cityBtn" destination="dTq-Y3-zLM" id="OZ6-Df-BRO"/>
+                <outlet property="iconImageView" destination="A3x-hj-iYg" id="bdq-EW-GTP"/>
+                <outlet property="nikeName" destination="jPX-1S-WwJ" id="SpK-fJ-UsS"/>
+                <outlet property="onileBtn" destination="910-mv-N3T" id="g0o-Ag-oAj"/>
+            </connections>
             <point key="canvasLocation" x="-41" y="-82.5"/>
         </collectionViewCell>
     </objects>

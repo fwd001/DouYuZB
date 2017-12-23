@@ -46,7 +46,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTE-VD-Wbp">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTE-VD-Wbp">
                         <rect key="frame" x="214" y="158" width="50" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="22222" image="Image_online"/>
@@ -69,6 +69,12 @@
                 <constraint firstItem="Xz1-fU-tmp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zHE-4L-TDm"/>
             </constraints>
             <size key="customSize" width="269" height="208"/>
+            <connections>
+                <outlet property="iconImageView" destination="EiN-hZ-QuQ" id="fwr-Wb-xwx"/>
+                <outlet property="nikeName" destination="R2v-zC-Ae4" id="jEa-Sz-TyZ"/>
+                <outlet property="onileBtn" destination="RTE-VD-Wbp" id="xNI-LB-6uM"/>
+                <outlet property="roomName" destination="nNO-8g-9mz" id="5Kh-7L-8Xg"/>
+            </connections>
             <point key="canvasLocation" x="25.5" y="29"/>
         </collectionViewCell>
     </objects>

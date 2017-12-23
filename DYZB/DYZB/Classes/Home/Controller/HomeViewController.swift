@@ -42,17 +42,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         //设置UI界面
         setupUI()
-        // 发送网络请求
-        loadData()
-    }
-}
-
-// MARK: - 请求数据
-extension HomeViewController {
-    private func loadData() {
-        NetworkTools.requestData(type: .get, URLString: "http://httpbin.org/get", parameters: ["name" : "why"]) { (result) in
-            print(result)
-        }
     }
 }
 
